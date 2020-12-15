@@ -173,5 +173,73 @@ module.exports = function(app) {
             res.json(dbShoe);
         });
     });
+
+    // finding all shoes belonging to a specific category
+    app.get("/api/shoes/name/:name?/brand/:brand?/release_date/:release_date?/collaborators/:collaborators?/color/:color?/sizing_type/:sizing_type?/sizing_gender/:sizing_gender?/min_size/:min_size?/max_size/:max_size?/price_min/:price_min?/price_max/:price_max?/description/:description?/style/:style?/product_link/:product_link?", function(req, res) {
+        let whereProps = {};
+
+        if (req.params.name) {
+            whereProps.name = req.params.name
+        }
+
+        if (req.params.brand) {
+            whereProps.brand = req.params.brand
+        }
+
+        if (req.params.release_date) {
+            whereProps.release_date = req.params.release_date
+        }
+
+        if (req.params.collaborators) {
+            whereProps.collaborators = req.params.collaborators
+        }
+
+        if (req.params.color) {
+            whereProps.color = req.params.color
+        }
+
+        if (req.params.sizing_type) {
+            whereProps.sizing_type = req.params.sizing_type
+        }
+
+        if (req.params.sizing_gender) {
+            whereProps.sizing_gender = req.params.sizing_gender
+        }
+
+        if (req.params.min_size) {
+            whereProps.min_size = req.params.min_size
+        }
+
+        if (req.params.max_size) {
+            whereProps.max_size = req.params.max_size
+        }
+
+        if (req.params.price_min && price_min >= req.params.price_min) {
+            whereProps.price_min = req.params.price_min
+        }
+
+        if (req.params.price_max && price_max <= req.params.price_max) {
+            whereProps.price_max = req.params.price_max
+        }
+
+        if (req.params.description) {
+            whereProps.description = req.params.description
+        }
+
+        if (req.params.style) {
+            whereProps.style = req.params.style
+        }
+
+        if (req.params.product_link) {
+            whereProps.product_link = req.params.product_link
+        }
+
+        
+        db.Shoe.findAll({
+            where: whereProps
+        }).then(function(dbShoe) {
+            res.json(dbShoe);
+        });
+    });
   
 };
