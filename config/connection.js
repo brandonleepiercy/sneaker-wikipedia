@@ -10,9 +10,9 @@ var sequelize = new Sequelize(process.env.database, "root", process.env.password
       min: 0,
       idle: 10000
     }
-  });
+});
 
-  module.exports = sequelize;
+module.exports = sequelize;
 
 
 

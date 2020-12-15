@@ -3,17 +3,18 @@
 // Series of npm packages that we will use to give our server useful functionality
 // ==============================================================================
 
-var express = require("express");
-var dotenv = require('dotenv').config()
+const express = require("express");
+const dotenv = require('dotenv').config()
+const path = require('path');
 
 // Tells node that we are creating an "express" server
-var app = express();
+const app = express();
 
 // Sets an initial port. We"ll use this later in our listener
-var PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
-var db = require("./models");
+const db = require("./models");
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -23,9 +24,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // ROUTES
-require("./routes/reviews-api-routes.js")(app);
-require("./routes/shoes-api-routes.js")(app);
-require("./routes/html-routes.js")(app);
+// require("./routes/reviews-api-routes.js")(app);
+// require("./routes/shoes-api-routes.js")(app);
+// require("./routes/html-routes.js")(app);
 
 // starts server listening
 db.sequelize.sync({ force: true }).then(function() {
