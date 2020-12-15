@@ -4,6 +4,7 @@
 // ==============================================================================
 
 var express = require("express");
+var dotenv = require('dotenv').config()
 
 // Tells node that we are creating an "express" server
 var app = express();
