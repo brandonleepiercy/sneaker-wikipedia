@@ -1,9 +1,12 @@
 #mainimage {
     width: 100%;
     height: 100vh;
-    padding-top: 100px;
-    background-image: url("../assets/background/back.png");
+
+}
+body{
+    background-image: url("../assets/background/back2.png");
     background-size: cover;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 #center {
@@ -32,4 +35,28 @@
     cursor: pointer;
   }
 
-  /* lallaalal */
+  .carousel-inner{
+      background-color:#bc0e29
+  }
+
+  .carousel-item {
+      height:500px
+  }
+
+  .carousel-item img {
+      margin:0 auto;
+      min-height: 500px;
+      height:300px;
+      object-fit: cover;
+
+  }
+.martop{
+    margin-top: 50px;
+}
+
+.marsearch{
+    margin-top: 50px;
+    align-content: center;
+    font-family: 'JetBrains Mono', monospace;
+}
+
