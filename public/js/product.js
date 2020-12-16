@@ -12,10 +12,10 @@ $(function () {
             //Emptying the placeholders in the html sections
             $("#name").empty();
             $("#brand").empty();
-            $("#price-range").empty();
-            $("#release-date").empty();
-            $("#collaborator").empty();
-            $("#size-range").empty();
+            $("#price").empty();
+            $("#date").empty();
+            $("#collab").empty();
+            $("#size").empty();
             $("#desc").empty();
             $("#link").empty();
             $("#image").empty();
@@ -23,10 +23,10 @@ $(function () {
             //Appending the pulled data to the html sections
             $("#name").append(data.name);
             $("#brand").append(data.brand);
-            $("#price-range").append("$"+data.pricemin+" -  $"+data.pricemax);
-            $("#release-date").append(data.release_date);
-            $("#collaborator").append(data.collaborator);
-            $("#size-range").append(data.sizemin+" - "+data.sizemax);
+            $("#price").append("$"+data.pricemin+" -  $"+data.pricemax);
+            $("#date").append(data.release_date);
+            $("#collab").append(data.collaborator);
+            $("#size").append(data.sizemin+" - "+data.sizemax);
             $("#desc").append(data.desc);
             $("#link").append(data.link);
             $("#image").append(data.image_link);
