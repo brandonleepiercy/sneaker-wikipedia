@@ -11,9 +11,12 @@ module.exports = function(sequelize, DataTypes) {
       max_size: DataTypes.INTEGER,
       price_min: DataTypes.INTEGER,
       price_max: DataTypes.INTEGER,
-      description: DataTypes.STRING,
+      description: DataTypes.TEXT,
       style: DataTypes.STRING,
       product_link: DataTypes.STRING
+    },
+    {
+      timestamps: false
     });
     return Shoe;
 };
