@@ -9,6 +9,15 @@ body {
     cursor: pointer;
     letter-spacing: 5px;
     margin: 0;
+    font-weight: 600;
+}
+
+#font-weight {
+    font-weight: 500;
+}
+ 
+.expand {
+    display: inline;
 }
 
 .drop {
@@ -16,7 +25,7 @@ body {
     text-decoration: none;
     margin-top: 5px;
     letter-spacing: 5px;
-    list-style-type: none;
+    font-weight: 200;
 }
 
 .container {
@@ -26,9 +35,8 @@ body {
     padding: 0;
 }
 
-input {
-    padding: 0;
-    margin-left: 10px;
+span {
+    margin-left: 15px;
     display: inline-block;
 }
 
