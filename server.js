@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // ROUTES
-// require("./routes/reviews-api-routes.js")(app);
+require("./routes/reviews-api-routes.js")(app);
 require("./routes/shoes-api-routes.js")(app);
 // require("./routes/html-routes.js")(app);
 
