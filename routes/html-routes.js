@@ -13,13 +13,14 @@ module.exports = function (app) {
     });
 
     //Displays the search page and the results based on the searched value (passed through the request and stored in 'searchTerm')
-    app.get("/search?=:term", function(req, res) {
-        var searchTerm = req.params.term;
+    app.get("/search", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/search.html"));
     });
 
     //Displays the shoe and the associated data on a page based on the url parameter stored in 'shoe'
     app.get("/shoe/:shoe", function(req, res) {
         var shoe = req.params.shoe;
+        res.sendFile(path.join(__dirname, "../public/product.html"));
 
     });
 };
