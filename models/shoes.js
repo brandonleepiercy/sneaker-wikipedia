@@ -18,5 +18,12 @@ module.exports = function(sequelize, DataTypes) {
     {
       timestamps: false
     });
+    Shoe.associate = function(models) {
+      // Associating Shoes with reviews
+      // When an Shoe is deleted, also delete any associated reviews
+      Shoe.hasMany(models.Review, {
+        onDelete: "cascade"
+      });
+    };
     return Shoe;
 };
