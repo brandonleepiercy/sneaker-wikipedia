@@ -1,21 +1,27 @@
-$(function () {
-
-    let url = window.location.search;
-    let ShoeId;
-    if (url.indexOf("?shoe_id=") !== -1) {
-        ShoeId = url.split("=")[1];
-        getReviews(ShoeId);
-    }
-    else {
-        return;
-    }
+$(document).ready(function () { 
+    console.log("hello world!");
+    var url = new URL(window.location.href);
+    console.log(url.pathname.split("/")[2]);
+    var id = url.pathname.split("/")[2];
+    console.log(id);
+    console.log(url);
+    // let url = window.location.search;
+    // let ShoeId;
+    // if (url.indexOf("?id=") !== -1) {
+    //     ShoeId = url.split("=")[1];
+    //     getReviews(ShoeId);
+    //     console.log(ShoeId);
+    // }
+    // else {
+    //     return;
+    // }
     //If there isn't a shoeID stored, instruct the user to go back and pick another shoe.
-    if (!ShoeID) {
+    if (!id) {
         console.log("No shoe selected. Go back to browse.");
         
     } else {
         //API call to pull the data for the requested shoe
-        $.get("/api/shoes/"+ShoeID, function(data) {
+        $.get("/api/shoes/"+id, function(data) {
             //Console log the object of the requested shoe
             console.log(data);
     
@@ -37,7 +43,7 @@ $(function () {
     
                 //Appending the pulled data to the html sections
                 $("#name").append(data.name);
-                $("#image").src=data.product_image;
+                $("#image").attr("src",data.product_image);
                 $("#brand").append(data.brand);
                 $("#date").append(data.release_date);
                 $("#price").append("$"+data.price_min+" - $"+data.price_max);
