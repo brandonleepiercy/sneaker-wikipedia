@@ -13,7 +13,8 @@ module.exports = function(sequelize, DataTypes) {
       price_max: DataTypes.INTEGER,
       description: DataTypes.TEXT,
       style: DataTypes.STRING,
-      product_link: DataTypes.STRING
+      product_link: DataTypes.STRING,
+      product_image:DataTypes.STRING
     },
     {
       timestamps: false
