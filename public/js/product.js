@@ -1,14 +1,21 @@
 $(function () {
 
-    shoeID = localStorage.getItem('lastShoe');
-
+    let url = window.location.search;
+    let ShoeId;
+    if (url.indexOf("?shoe_id=") !== -1) {
+        ShoeId = url.split("=")[1];
+        getReviews(ShoeId);
+    }
+    else {
+        return;
+    }
     //If there isn't a shoeID stored, instruct the user to go back and pick another shoe.
-    if (!shoeID) {
+    if (!ShoeID) {
         console.log("No shoe selected. Go back to browse.");
         
     } else {
         //API call to pull the data for the requested shoe
-        $.get("/api/shoes/"+shoeID, function(data) {
+        $.get("/api/shoes/"+ShoeID, function(data) {
             //Console log the object of the requested shoe
             console.log(data);
     
