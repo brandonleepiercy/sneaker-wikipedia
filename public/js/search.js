@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     $("#filter-form").on("submit", function(event) {
 
         event.preventDefault();
@@ -62,16 +61,88 @@ $(document).ready(function() {
         }).get();
         console.log(selectedCollaborators);
 
+
+        let shoeFilters = {
+            gender: selectedGenders,
+            us_size: usSizes,
+            eu_size: euSizes,
+            uk_size: ukSizes,
+            brands: selectedBrands,
+            styles: selectedStyles,
+            colors: selectedColors,
+            years: selectedYears,
+            prices: maxPrice,
+            collabs: selectedCollaborators
+        }
         $.ajax({
             method: "POST",
-            url: "/api/shoes/"
-        }).then(function() {
-            
-        })
+            url: "/api/shoes",
+            data: shoeFilters
+        }).then(function(res) {
+            console.log(res);
 
+            for (elem of res) {
+                let newShoeCol = $("<div>");
+                newShoeCol.addClass("col-sm-4");
+
+                let shoeCard = $("<div>");
+                shoeCard.addClass("card shoe");
+                
+                let shoeImg = $("<img>");
+                shoeImg.attr("src", "elem.img_url");
+                shoeImg.addClass("card-img-top");
+                shoeImg.attr("alt", "a cute shoe");
+                
+                let shoeCardBody = $("<div>");
+                shoeCardBody.addClass("card-body");
+                
+                let shoeCardName = $("<p>");
+                shoeCardName.addClass("card-text");
+                shoeCardName.text(elem.name);
+                shoeCard.css({
+                    width: "15rem"
+                });
+
+                shoeCardBody.append(shoeCardName);
+                shoeCard.append(shoeImg, shoeCardBody);
+                newShoeCol.append(shoeCard)
+                $("#new-cards-div").append(newShoeCol);
+            }
+
+
+        })
 
     })
 });
+
+// function getShoeInfo(id) {
+//     $.ajax({
+//         method: 'GET',
+//         url: "/api/shoes/:id"
+//     }).then(function(res) {
+//         console.log(res);
+        
+//         // let lastShoeInfo = {
+//         //     name: res.name,
+//         //     brand: res.brand,
+//         //     releaseDate: res.release_date,
+//         //     collaborators: res.collaborators,
+//         //     color: res.color,
+//         //     sizeType: res.sizing_type,
+//         //     minSize: res.min_size,
+//         //     maxSize: res.max_size,
+//         //     priceMin: res.price_min,
+//         //     priceMax: res.price_max,
+//         //     description: res.description,
+//         //     style: res.style,
+//         //     productLink: res.product_link
+//         // }
+//         localStorage.setItem("lastShoe", res.id);
+
+
+//     })
+// }
+
     
 
 
