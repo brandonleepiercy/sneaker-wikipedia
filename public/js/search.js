@@ -108,7 +108,7 @@ $(document).ready(function() {
                 });
 
                 let shoeLink = $("<a>");
-                shoeLink.attr("href", "/shoe/?id=" + elem.id);
+                shoeLink.attr("href", "/shoe/" + elem.id);
                 shoeLink.append(shoeCard);
 
                 shoeCardBody.append(shoeCardName);
