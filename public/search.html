@@ -30,13 +30,17 @@
             <input class="form-control mr-sm-2" id="search-bar" type="search" placeholder="SEARCH" aria-label="Search">
           </form>
 
-        <!-- FILTER FOR SEX-->
-          <p class="filter" data-toggle="collapse" data-target="#sex" aria-expanded="false" aria-controls="collapseExample">
-            SEX
+       
+
+        <form action="" id="filter-form">
+
+           <!-- FILTER FOR SEX-->
+           <p class="filter" id="sex" data-toggle="collapse" data-target="#sex" aria-expanded="false" aria-controls="collapseExample">
+            GENDER
             <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
           </p>
 
-            <div class="collapse drop" id="sex">
+            <div class="collapse drop" id="gender">
               <span class="checkmark">
                 <input type="checkbox" value="w" name="women">
                 <label class="container">WOMEN</label>
@@ -47,9 +51,8 @@
               </span> 
             </div>
 
-        <form action="" id="filter-form">
         <!-- FILTER FOR SIZE -->
-            <p class="filter" data-toggle="collapse" data-target="#sizes" aria-expanded="false" aria-controls="collapseExample">
+            <p class="filter" id="size" data-toggle="collapse" data-target="#sizes" aria-expanded="false" aria-controls="collapseExample">
               SIZE 
               <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
             </p>
@@ -128,51 +131,51 @@
                 <p class="filter font-weight" data-toggle="collapse" data-target="#UK" aria-expanded="false" aria-controls="collapseExample">UK</p> 
                   <div class="collapse drop" id="UK">
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="5" name="uk-size">
                       <label class="container">5</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="6" name="uk-size">
                       <label class="container">6</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="7" name="uk-size">
                       <label class="container">7</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="8" name="uk-size">
                       <label class="container">8</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="9" name="uk-size"> 
                       <label class="container">9</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="10" name="uk-size">
                       <label class="container">10</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="11" name="uk-size">
                       <label class="container">11</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="12" name="uk-size">
                       <label class="container">12</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="13" name="uk-size">
                       <label class="container">13</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="14" name="uk-size">
                       <label class="container">14</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="15" name="uk-size">
                       <label class="container">15</label>
                     </span>
                     <span class="checkmark">
-                      <input type="checkbox">
+                      <input type="checkbox" value="16" name="uk-size">
                       <label class="container">16</label>
                     </span>
                   </div>
@@ -245,7 +248,7 @@
                 </div>    
 
           <!-- FILTER BY STYLE -->
-            <p class="filter" data-toggle="collapse" data-target="#styles" aria-expanded="false" aria-controls="collapseExample">
+            <p class="filter" id="sty" data-toggle="collapse" data-target="#styles" aria-expanded="false" aria-controls="collapseExample">
               STYLE 
               <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
             </p>
@@ -274,7 +277,7 @@
               </div>
 
           <!-- FILTER BY COLOR -->
-              <p class="filter" data-toggle="collapse" data-target="#color" aria-expanded="false" aria-controls="collapseExample">
+              <p class="filter" id="col" data-toggle="collapse" data-target="#color" aria-expanded="false" aria-controls="collapseExample">
                 COLOR
                 <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
               </p>
@@ -315,7 +318,7 @@
                 </div>
 
           <!-- FILTER BY RELEASE DATE -->
-              <p class="filter" data-toggle="collapse" data-target="#release-year" aria-expanded="false" aria-controls="collapseExample">
+              <p class="filter" id="date" data-toggle="collapse" data-target="#release-year" aria-expanded="false" aria-controls="collapseExample">
                 DATE RELEASED 
                 <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
               </p>
@@ -344,7 +347,7 @@
                 </div>
 
             <!-- FILTER BY BRAND -->
-            <p class="filter" data-toggle="collapse" data-target="#brands" aria-expanded="false" aria-controls="collapseExample">
+            <p class="filter" id="brand" data-toggle="collapse" data-target="#brands" aria-expanded="false" aria-controls="collapseExample">
               BRAND 
               <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
             </p>
@@ -446,7 +449,7 @@
               </div>
 
             <!-- FILTER BY PRICE -->
-                <p class="filter" data-toggle="collapse" data-target="#prices" aria-expanded="false" aria-controls="collapseExample">
+                <p class="filter" id="max" data-toggle="collapse" data-target="#prices" aria-expanded="false" aria-controls="collapseExample">
                   MAX PRICE
                   <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
                 </p>
@@ -490,7 +493,7 @@
                   </div>
 
             <!-- FILTER BY COLLABORATOR -->
-              <p class="filter" data-toggle="collapse" data-target="#collaborators" aria-expanded="false" aria-controls="collapseExample">
+              <p class="filter" id="collab" data-toggle="collapse" data-target="#collaborators" aria-expanded="false" aria-controls="collapseExample">
                 COLLABORATORS
                 <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
               </p>
