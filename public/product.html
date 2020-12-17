@@ -50,16 +50,46 @@
       </div>
 
       <!-- Ratings and comments -->
-      <div class="row">
-        <!-- Stars -->
-        <div class="rating col-12"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label></div>
 
-        <!-- <div class="form-group col-12">
-          <label for="exampleFormControlTextarea5">Comments</label>
-          <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
-        </div> -->
+        <!-- Comment Section -->
+        <div class="row">
+          <div class="col-12 mt-4">
+              <h1>Comments</h1>
 
-      </div>
+              <!-- FOR THE BACKEND: id's used below are reviews-container (if you want to dynamically create), first-reviewer, reviwer-rating, reviewer-date, reviewer-comment -->
+              <div class="reviews-container">
+                <div class="mt-4" id="first-reviewer">
+                    <h4 id="reviewer-name">Jhon Doe</h4>
+                    <div id="reviwer-rating"></div>
+                    <span id="reviewer-date">- 20 October, 2018</span>
+                    <p id="reviewer-comment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-12">
+            <!-- Star Ratings -->
+            <div class="rating">
+              <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+              <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+              <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+              <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+              <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+            </div>
+            
+            <!-- Submit a Comment -->
+            <!-- FOR THE BACKEND: id's used below are comment-input, comment-name-input, verified-buyer, comment-button-input -->
+            <h4>Leave a comment</h4> 
+                  <label for="message">Comment</label>
+                      <textarea name="msg" cols="30" rows="5" class="form-control" id="comment-input"></textarea>
+                  <label for="name">Name</label>
+                      <input type="text" name="name" class="form-control" id="comment-name-input">
+                  <input type="checkbox" id="verified-buyer">
+                      <label>I have purchased these shoes</label><br>
+                  <button type="button" class="mt-2 mb-5" id="comment-button-input">Post Comment</button> 
+          </div>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -69,5 +99,3 @@
 
   </body>
 </html>
-
-<!-- lalalal -->
