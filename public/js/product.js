@@ -18,7 +18,6 @@ $(function () {
             } else {
                 //Emptying the placeholders in the html sections
                 $("#name").empty();
-                $("#image").empty();
                 $("#brand").empty();
                 $("#date").empty();
                 $("#price").empty();
@@ -31,7 +30,7 @@ $(function () {
     
                 //Appending the pulled data to the html sections
                 $("#name").append(data.name);
-                $("#image").append(data.product_link); //<---- This line is not going to work
+                $("#image").src=data.product_link; //<---- This line is not going to work
                 $("#brand").append(data.brand);
                 $("#date").append(data.release_date);
                 $("#price").append("$"+data.price_min+" - $"+data.price_max);
