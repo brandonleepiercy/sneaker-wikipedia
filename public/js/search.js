@@ -20,35 +20,35 @@ $(document).ready(function() {
         // brand selections
         event.preventDefault();
         let selectedBrands = $('input[name=brands]:checked').map(function(_, el) {
-            return parseInt($(el).val());
+            return $(el).val();
         }).get();
         console.log(selectedBrands);
 
         // style selections
         event.preventDefault();
         let selectedStyles = $('input[name=styles]:checked').map(function(_, el) {
-            return parseInt($(el).val());
+            return $(el).val();
         }).get();
         console.log(selectedStyles);
 
         // color selections
         event.preventDefault();
-        let selectedColors = $('input[name=us-size]:checked').map(function(_, el) {
-            return parseInt($(el).val());
+        let selectedColors = $('input[name=color]:checked').map(function(_, el) {
+            return $(el).val();
         }).get();
         console.log(selectedColors);
 
         // release year selections
         event.preventDefault();
-        let selectedYears = $('input[name=us-size]:checked').map(function(_, el) {
-            return parseInt($(el).val());
+        let selectedYears = $('input[name=release-year]:checked').map(function(_, el) {
+            return $(el).val();
         }).get();
         console.log(selectedYears);
 
         // collaborator selections
         event.preventDefault();
-        let selectedCollaborators = $('input[name=us-size]:checked').map(function(_, el) {
-            return parseInt($(el).val());
+        let selectedCollaborators = $('input[name=collaborators]:checked').map(function(_, el) {
+            return $(el).val();
         }).get();
         console.log(selectedCollaborators);
     })
