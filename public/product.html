@@ -9,7 +9,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/product.css">
 
     <title>Product</title>
@@ -21,17 +22,18 @@
 
       <div class="main-content">
         <!-- Shoe Name -->
-        <h2 class="row" id="name">Yeezy Boost 350 V2 Semi Frozen Yellow</h2>
+        <div class="row">
+          <h2 class="col-12" id="name">Yeezy Boost 350 V2 Semi Frozen Yellow</h2>
+        </div>
 
         <div class="row">
           <!-- The main shoe image -->
-            <div class="col-6">
-              <img src="assets/products/shanni-test.jpg" alt="boots">
+            <div class="col-7">
+              <img src="assets/products/shanni-test.jpg" alt="boots" id="image">
               
             </div>
 
           <!-- Shoe information -->
-          <div class="col-1"></div>
             <div class="col-4 shoe-info">
               <div id="brand">Adidas</div>
               <div id="date">12/05/2020</div>
@@ -47,6 +49,17 @@
 
       </div>
 
+      <!-- Ratings and comments -->
+      <div class="row">
+        <!-- Stars -->
+        <div class="rating col-12"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label></div>
+
+        <!-- <div class="form-group col-12">
+          <label for="exampleFormControlTextarea5">Comments</label>
+          <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+        </div> -->
+
+      </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
