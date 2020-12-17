@@ -13,8 +13,9 @@ module.exports = function (app) {
     });
 
     //Displays the shoe and associated data on (../public/product.html), rendering handled by (../public/js/product.js)
-    app.get("/shoe/:id", function(req, res) {
+    app.get("/shoe/?shoe_id=:id", function(req, res) {
         var shoe = req.params.shoe;
         res.sendFile(path.join(__dirname, "../public/product.html"));
     });
 };
+
