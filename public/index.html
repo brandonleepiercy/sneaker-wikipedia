@@ -6,43 +6,38 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;1,400;1,600;1,800&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-
-    <!-- background image begins here -->
-    <div id="mainimage">
         <div class="container">
+
+            <!-- Background Image -->
             <div class="row">
                 <div class="col-md-4"></div>
 
-                <!-- Logo begins here -->
-                <div class="col-md-4"><img src="assets/logo/logov7.png" class="img-fluid" alt="Responsive image"></div>
+                <!-- Logo -->
+                <div class="col-md-4 logo">
+                    <img src="assets/logo/logov7.png"  class="img-fluid" alt="Sneaker Wikipedia">
+                </div>
                 <div class="col-md-4"></div>
             </div>
 
-            <!-- this is where the search bar begins  -->
-
-            <div class="row marsearch">
-                <div id="center">
-                    <form class="form-inline my-2 mr-auto">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="SEARCH"
-                            id="search-input">
-                    </form>
+            <!-- Search Bar  -->
+            <div class="row">
+                <div class="col-12 mar-center">
+                        <input class="form-control" type="search" placeholder="SEARCH" id="search-input">
                 </div>
             </div>
-
-            <!-- this is where Carousel begins -->
-
-            <div class="row martop">
-                <div class="col-md-12">
+        </div>
+            <!-- Carousel -->
+            <div class="row carousel-margin">
+                <div class="col-12">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -60,73 +55,58 @@
                                 <img src="assets/carousel/3c copy.png" class="d-block w-10" alt="...">
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                            data-slide="prev">
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                            data-slide="next">
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
                 </div>
             </div>
+                        
+
+        <div class="container">
+            <!-- this is where browse copy begins -->
+            <div class="row">
+                <h1 class="col-md-12 browse-by-style">BROWSE BY STYLE</h1>
+            </div>
+
+
+            <!-- category selection begins here -->
+            <div class="row">
+                <div class="col-4">
+                    <img src="assets/products/basketball.png" alt="Basketball Shoes" class="image">
+                    <a href="search.html" class="btn shoe-style-btn" role="button" aria-pressed="true">BASKETBALL</a>
+                </div>
+                <div class="col-4">
+                    <img src="assets/products/training.png" alt="Sneakers" class="image">
+                    <a href="search.html" class="btn shoe-style-btn" role="button" aria-pressed="true">TRAINING</a>
+                </div>
+                <div class="col-4">
+                    <img src="assets/products/formal.png" alt="Lounge Shoes" class="image">
+                    <a href="search.html" class="btn shoe-style-btn" role="button" aria-pressed="true">LOUNGE</a>                   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="assets/products/casual.png" alt="Casual Sneakers" class="image">
+                    <a href="search.html" class="btn shoe-style-btn" role="button" aria-pressed="true">CASUAL</a>   
+                </div>
+                <div class="col-4">
+                    <img src="assets/products/boots copy.png" alt="Boots" class="image">
+                    <a href="search.html" class="btn shoe-style-btn" role="button" aria-pressed="true">BOOTS</a>       
+                </div>
+                <!-- change data-genre from running to all... we dont have a running category but we do need an all -->
+                <div class="col-4">
+                    <img src="assets/products/runining.png" alt="Limited Edition Sneakers" class="image">
+                    <a href="search.html" class="btn shoe-style-btn" role="button" aria-pressed="true">VIEW ALL</a>    
+                </div>
+            </div>
+
         </div>
-        <div class="container" style="margin-bottom: 40em;">
-        </div>
-
-
-        <!-- this is where browse copy begins -->
-        <div class="col-md-4">
-            <h1> BROWSE BY STYLE</h1>
-        </div>
-
-
-        <!-- category selection begins here -->
-        <div class="row martop">
-            <div class="col-md-4" data-genre="Basketball">
-                <img src="assets/products/basketball.png" alt="Avatar" class="image" style="width:100%">
-                <a href="search.html" class="btn" role="button" aria-pressed="true">Primary link</a>
-                <div class="middle">
-                </div>
-            </div>
-            <div class="col-md-4" data-genre="Training">
-                <img src="assets/products/training.png" alt="Avatar" class="image" style="width:100%">
-                <a href="search.html" class="btn" role="button" aria-pressed="true">Primary link</a>
-                <div class="middle">
-                </div>
-            </div>
-            <div class="col-md-4" data-genre="Formal">
-                <img src="assets/products/formal.png" alt="Avatar" class="image" style="width:100%">
-                <a href="search.html" class="btn" role="button" aria-pressed="true">Primary link</a>
-                <div class="middle">
-                </div>
-            </div>
-        </div>
-        <div class="row martop">
-            <div class="col-md-4" data-genre="Casual">
-                <img src="assets/products/casual.png" alt="Avatar" class="image" style="width:100%">
-                <a href="search.html" class="btn" role="button" aria-pressed="true">Primary link</a>
-                <div class="middle">
-                </div>
-            </div>
-            <div class="col-md-4" data-genre="Boots">
-                <img src="assets/products/boots copy.png" alt="Avatar" class="image" style="width:100%">
-                <a href="search.html" class="btn" role="button" aria-pressed="true">Primary link</a>
-                <div class="middle">
-                </div>
-            </div>
-            <div class="col-md-4" data-genre="Running">
-                <img src="assets/products/runining.png" alt="Avatar" class="image" style="width:100%">
-                <a href="search.html" class="btn" role="button" aria-pressed="true">Primary link</a>
-                <div class="middle">
-                </div>
-            </div>
-        </div>
-
-
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
