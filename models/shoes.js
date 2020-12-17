@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
       description: DataTypes.TEXT,
       style: DataTypes.STRING,
       product_link: DataTypes.STRING,
-      product_image:DataTypes.STRING
+      product_image: DataTypes.STRING
     },
     {
       timestamps: false
