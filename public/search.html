@@ -10,6 +10,30 @@
     <link rel="stylesheet" href="./css/search.css">
 </head>
 <body>
+
+  <!-- SIZES THE WIDTH OF THE SIDE BAR -->
+  <div class="container">
+    <div class="col-sm-5">
+
+    <!-- FILTER FOR SEX-->
+      <p class="filter" data-toggle="collapse" data-target="#sex" aria-expanded="false" aria-controls="collapseExample">
+        SEX
+        <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
+      </p>
+
+      
+
+        <div class="collapse drop" id="sex">
+          <span class="checkmark">
+            <input type="checkbox">
+            <label class="container">WOMEN</label>
+          </span>       
+          <span class="checkmark">
+            <input type="checkbox">
+            <label class="container">MEN</label>
+          </span> 
+        </div>
+
     <form action="" id="filter-form">
         <p class="filter" data-toggle="collapse" data-target="#brands" aria-expanded="false" aria-controls="collapseExample">
           BRAND 
@@ -145,11 +169,15 @@
             </span>
           </div>
 
+    <!-- FILTER FOR SIZE -->
         <p class="filter" data-toggle="collapse" data-target="#sizes" aria-expanded="false" aria-controls="collapseExample">
           SIZE 
+          <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
         </p>
+
+          <!-- US SIZES -->
           <div class="collapse drop" id="sizes">
-            <p class="filter" data-toggle="collapse" data-target="#US" aria-expanded="false" aria-controls="collapseExample">US</p> 
+            <p class="filter" id="font-weight" data-toggle="collapse" data-target="#US" aria-expanded="false" aria-controls="collapseExample">US</p> 
               <div class="collapse drop" id="US">
                 <span class="checkmark">
                   <input type="checkbox" value="3" name="us-size">
@@ -217,10 +245,66 @@
                 </span>
               </div>
 
-            <p class="filter" data-toggle="collapse" data-target="#EU" aria-expanded="false" aria-controls="collapseExample">EU</p> 
+              <!-- UK SIZES -->
+            <p class="filter" id="font-weight" data-toggle="collapse" data-target="#UK" aria-expanded="false" aria-controls="collapseExample">UK</p> 
+              <div class="collapse drop" id="UK">
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">5</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">6</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">7</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">8</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">9</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">10</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">11</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">12</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">13</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">14</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">15</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">16</label>
+                </span>
+              </div>
+
+            <!-- EU SIZES -->
+
+            <p class="filter" id="font-weight" data-toggle="collapse" data-target="#EU" aria-expanded="false" aria-controls="collapseExample">EU</p> 
               <div class="collapse drop" id="EU">
                 <span class="checkmark">
                   <input type="checkbox" value="34" name="eu-size">
+
                   <label class="container">34</label>
                 </span>
                 <span class="checkmark">
@@ -280,11 +364,15 @@
                   <label class="container">48</label>
                 </span>
               </div>
-          </div>
-  
+            </div>    
+
+      <!-- FILTER BY STYLE -->
         <p class="filter" data-toggle="collapse" data-target="#styles" aria-expanded="false" aria-controls="collapseExample">
           STYLE 
+          <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
         </p>
+
+
           <div class="collapse drop" id="styles">
             <span class="checkmark">
               <input type="checkbox" value="basketball" name="styles">
@@ -308,9 +396,12 @@
             </span>
           </div>
 
+      <!-- FILTER BY COLOR -->
           <p class="filter" data-toggle="collapse" data-target="#color" aria-expanded="false" aria-controls="collapseExample">
             COLOR
+            <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
           </p>
+
             <div class="collapse drop" id="color">
               <span class="checkmark">
                 <input type="checkbox" value="beige" name="color">
@@ -346,10 +437,12 @@
               </span>
             </div>
 
-
+      <!-- FILTER BY RELEASE DATE -->
           <p class="filter" data-toggle="collapse" data-target="#release-year" aria-expanded="false" aria-controls="collapseExample">
             RELEASE DATE 
+            <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
           </p>
+
             <div class="collapse drop" id="release-year">
               <span class="checkmark">
                 <input type="checkbox" value="2016" name="release-year">
@@ -372,9 +465,153 @@
                 <label class="container">2020</label>
               </span>  
             </div>
+
+        <!-- FILTER BY BRAND -->
+            <p class="filter" data-toggle="collapse" data-target="#brands" aria-expanded="false" aria-controls="collapseExample">
+              BRAND 
+              <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
+            </p>
+
+              <div class="collapse drop" id="brands">
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">A BATHING APE</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">ADIDAS</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">AIR JORDAN</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">ALEXANDER MCQUEEN</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">ASICS</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">BALENCIAGA</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">BURBURY</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">COMMON PROJECTS</label>
+                  </span>
+                    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">CONVERSE</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">CROCS</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">DIOR</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">GUCCI</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">NEW BALANCE</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">NIKE</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">OFF-WHITE</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">PRADA</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">PUMA</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">REEBOK</label>
+                  </span>
+    
+                  <span class="checkmark">
+                    <input type="checkbox">
+                    <label class="container">TIMBERLAND</label>
+                  </span>      
+              </div>
+
+        <!-- FILTER BY PRICE -->
+            <p class="filter" data-toggle="collapse" data-target="#prices" aria-expanded="false" aria-controls="collapseExample">
+              PRICE
+              <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
+            </p>
+
+              <div class="collapse drop" id="prices">
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">0-100</label>
+                </span>       
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">101-200</label>
+                </span> 
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">201-300</label>
+                </span> 
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">201-300</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">201-400</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">401-600</label>
+                </span>
+                <span class="checkmark">
+                  <input type="checkbox">
+                  <label class="container">>600</label>
+                </span>
+              </div>
+
+      <!-- FILTER BY COLLABORATOR -->
           <p class="filter" data-toggle="collapse" data-target="#collaborators" aria-expanded="false" aria-controls="collapseExample">
             COLLABORATORS
+            <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand">
           </p>
+
             <div class="collapse drop" id="collaborators">
               <span class="checkmark">
                 <input type="checkbox" value="Ambush" name="collaborators">
@@ -505,9 +742,13 @@
                 <label class="container">WEEKND</label>
               </span>
             </div>
+      </div>
+    </div>
+
           <button type="submit">submit</button>
         </form>    
       
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
