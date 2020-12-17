@@ -2,55 +2,74 @@ $(document).ready(function() {
 
     $("#filter-form").on("submit", function(event) {
 
-        // size selections
         event.preventDefault();
+
+        // gender selections
+        let selectedGenders = $('input[name=gender]:checked').map(function(_, el) {
+            return $(el).val();
+        }).get();
+        console.log(selectedGenders);
+
+        // size selections
         let usSizes = $('input[name=us-size]:checked').map(function(_, el) {
             return parseInt($(el).val());
         }).get();
         console.log(usSizes);
+        
         let euSizes = $('input[name=eu-size]:checked').map(function(_, el) {
             return parseInt($(el).val());
         }).get();
         console.log(euSizes);
+
         let ukSizes = $('input[name=uk-size]:checked').map(function(_, el) {
             return parseInt($(el).val());
         }).get();
         console.log(ukSizes);
 
         // brand selections
-        event.preventDefault();
         let selectedBrands = $('input[name=brands]:checked').map(function(_, el) {
             return $(el).val();
         }).get();
         console.log(selectedBrands);
 
         // style selections
-        event.preventDefault();
         let selectedStyles = $('input[name=styles]:checked').map(function(_, el) {
             return $(el).val();
         }).get();
         console.log(selectedStyles);
 
         // color selections
-        event.preventDefault();
         let selectedColors = $('input[name=color]:checked').map(function(_, el) {
             return $(el).val();
         }).get();
         console.log(selectedColors);
 
         // release year selections
-        event.preventDefault();
         let selectedYears = $('input[name=release-year]:checked').map(function(_, el) {
             return $(el).val();
         }).get();
         console.log(selectedYears);
 
+        // max-price selections
+        let maxPrice = $('input[name=max-price]:checked').map(function(_, el) {
+            return parseInt($(el).val());
+        }).get();
+        console.log(maxPrice);
+
         // collaborator selections
-        event.preventDefault();
         let selectedCollaborators = $('input[name=collaborators]:checked').map(function(_, el) {
             return $(el).val();
         }).get();
         console.log(selectedCollaborators);
+
+        $.ajax({
+            method: "POST",
+            url: "/api/shoes/"
+        }).then(function() {
+            
+        })
+
+
     })
 });
     
