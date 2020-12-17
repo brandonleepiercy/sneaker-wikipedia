@@ -11,6 +11,9 @@ body{
     font-family: 'JetBrains Mono', monospace;
 }
 
+.float-center {
+    float: center!important;
+}
 .form-control::-webkit-input-placeholder {
     color: black;
     margin-left: 50%;
@@ -76,7 +79,9 @@ body{
     font-family: 'JetBrains Mono', monospace; 
     max-height: 300px;
     margin-bottom: 100px;
+    text-align: center;
 }
+
 
 .marsearch{
     margin-top: 50px;
@@ -94,7 +99,12 @@ body{
     letter-spacing: 5px;
 
 }
-
+.h1{
+    text-align: center;
+    letter-spacing: 5px;
+    color: #ffffff;
+    font-weight: 800;
+}
 @media only screen and (max-width: 1280px) {
     .martop {
         margin-top: 50px;
