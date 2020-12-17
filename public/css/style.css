@@ -22,6 +22,7 @@ body {
     font-weight: 600;
     text-align: center;
     margin-top: -4rem;
+    border-radius: 20px;
 }
 
 
@@ -67,7 +68,7 @@ body {
     width: 100%;
     height: auto;
     transition: .5s ease;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 .image:hover {
@@ -83,6 +84,7 @@ body {
     border: 3px solid #ffffff;
     letter-spacing: 5px;
     font-weight: 600;
+    border-radius: 20px;
 }
 
 .bottom-browse-by-style-div {
