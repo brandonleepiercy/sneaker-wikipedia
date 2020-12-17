@@ -3,6 +3,16 @@ body {
     margin: 50px;
 }
 
+.jumbotron {
+    background-image: url("../assets/background/back2.png");
+    margin-bottom: 50px;
+}
+
+#logo {
+    width: 50%;
+    height: 50%;
+}
+
 #search-bar {
     margin-left: 10px;
     margin-bottom: 10px;
@@ -63,13 +73,15 @@ span {
     margin-top: 10px;
 }
 
+.shoe{
+    margin: 0 40px 40px 70px;
+} 
+
 .shoe-pic {
     width: 15rem;
     height: 15rem;
 }
 
 .col-sm-3 {
-   padding: 30px;
+   padding-left: 30px;
 }
-
-/* git hub change */
