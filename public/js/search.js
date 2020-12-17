@@ -89,9 +89,13 @@ $(document).ready(function() {
                 shoeCard.addClass("card shoe");
                 
                 let shoeImg = $("<img>");
-                shoeImg.attr("src", "elem.img_url");
+                shoeImg.attr("src", elem.product_image);
                 shoeImg.addClass("card-img-top");
                 shoeImg.attr("alt", "a cute shoe");
+                shoeImg.css({
+                    width: "15rem",
+                    height: "15rem"
+                });
                 
                 let shoeCardBody = $("<div>");
                 shoeCardBody.addClass("card-body");
@@ -103,9 +107,14 @@ $(document).ready(function() {
                     width: "15rem"
                 });
 
+                let shoeLink = $("<a>");
+                shoeLink.attr("href", "/shoe/?id=" + elem.id);
+                shoeLink.append(shoeCard);
+
                 shoeCardBody.append(shoeCardName);
                 shoeCard.append(shoeImg, shoeCardBody);
-                newShoeCol.append(shoeCard)
+                shoeLink.append(shoeCard)
+                newShoeCol.append(shoeLink)
                 $("#new-cards-div").append(newShoeCol);
             }
 
