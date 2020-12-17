@@ -1,5 +1,5 @@
 body {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'FontAwesome','JetBrains Mono', monospace;
     margin: 50px;
 }
 
@@ -16,6 +16,7 @@ body {
 #search-bar {
     margin-left: 10px;
     margin-bottom: 10px;
+    letter-spacing: 5px;
 }
 
 .filter {
@@ -66,12 +67,14 @@ span {
 }
 
 .submit {
-    background-color: #f0ff00;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-left: 12px;
-    margin-top: 10px;
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #F0FF00;
+    border: 3px solid #020202;
+    letter-spacing: 5px;
     font-weight: 600;
+    border-radius: 10px;
 }
 
 .shoe{
@@ -83,6 +86,94 @@ span {
     height: 15rem;
 }
 
-.col-sm-3 {
+.col-xl-3 {
    padding-left: 30px;
 }
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1199px) {
+
+    .submit {
+        width: 30%;
+        margin-left: 10px;
+    }
+
+    .col-xl-4 {
+        padding-left: 75px;
+        padding-top: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .col-xl-4 {
+        margin: 0px;
+    }
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+    .col-lg-4 {
+        margin: 20px;
+     }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .col-lg-4 {
+        width: 10%;
+        margin: 20px;
+     }
+ 
+
+}
+
+
+
+
+@media screen and (max-width: 540px) {
+
+    #search-bar {
+        width: 75%
+    }
+
+    .shoe {
+        margin-left: 25px;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 360px) {
+ 
+    .shoe {
+        margin-left: 15px;
+    }
+}
+
+
+
+@media screen and (max-width: 320px) {
+
+    .jumbotron {
+        width: 100%
+    }
+
+    #search-bar {
+        width: 50%
+    }
+
+    .shoe {
+        margin-left: 10px;
+    }
+}
+
