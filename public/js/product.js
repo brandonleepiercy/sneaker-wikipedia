@@ -18,25 +18,26 @@ $(function () {
             } else {
                 //Emptying the placeholders in the html sections
                 $("#name").empty();
+                $("#image").empty();
                 $("#brand").empty();
-                $("#price").empty();
                 $("#date").empty();
+                $("#price").empty();
                 $("#collab").empty();
                 $("#size").empty();
                 $("#desc").empty();
-                $("#link").empty();
-                $("#image").empty();
+
+                var sizeTypeUpper = (data.sizing_type).toUpperCase();
+                var sizeGenderUpper = (data.sizing_gender).toUpperCase();
     
                 //Appending the pulled data to the html sections
                 $("#name").append(data.name);
+                $("#image").append(data.product_link); //<---- This line is not going to work
                 $("#brand").append(data.brand);
-                $("#price").append("$"+data.pricemin+" -  $"+data.pricemax);
                 $("#date").append(data.release_date);
-                $("#collab").append(data.collaborator);
-                $("#size").append(data.sizemin+" - "+data.sizemax);
-                $("#desc").append(data.desc);
-                $("#link").append(data.link);
-                $("#image").append(data.image_link);
+                $("#price").append("$"+data.price_min+" - $"+data.price_max);
+                $("#collab").append(data.collaborators);
+                $("#size").append(sizeTypeUpper+" "+sizeGenderUpper+" "+data.min_size+" - "+data.max_size);
+                $("#desc").append(data.description);
             };
         });
     };
