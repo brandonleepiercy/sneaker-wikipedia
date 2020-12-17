@@ -83,7 +83,7 @@ $(document).ready(function() {
 
             for (elem of res) {
                 let newShoeCol = $("<div>");
-                newShoeCol.addClass("col-sm-4");
+                newShoeCol.addClass("col-sm-4 col-xl-4");
 
                 let shoeCard = $("<div>");
                 shoeCard.addClass("card shoe");
