@@ -1,6 +1,11 @@
 body {
-    margin: 100px;
     font-family: 'JetBrains Mono', monospace;
+    margin: 50px;
+}
+
+#search-bar {
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .filter {
@@ -10,14 +15,19 @@ body {
     letter-spacing: 5px;
     margin: 0;
     font-weight: 600;
+    display: flex;
 }
 
-#font-weight {
+.font-weight {
     font-weight: 500;
 }
  
 .expand {
     display: inline;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    margin-top: 2px;
 }
 
 .drop {
@@ -44,3 +54,22 @@ span {
     text-decoration: none;
     color: inherit;
 }
+
+.submit {
+    background-color: #f0ff00;
+    border: 0.2px solid black;
+    border-radius: 5px;
+    margin-left: 12px;
+    margin-top: 10px;
+}
+
+.shoe-pic {
+    width: 15rem;
+    height: 15rem;
+}
+
+.col-sm-3 {
+   padding: 30px;
+}
+
+/* git hub change */
