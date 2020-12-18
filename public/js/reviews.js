@@ -2,96 +2,54 @@ $(document).ready(function() {
 
   const reviewsContainer = $(".reviews-container");
 
-  // on click events for delete and update button
-  $(document).on("click", ".delete-btn", deleteReview);
-  $(document).on("click", ".update-btn", updateReview);
+  // // on click events for delete and update button
+  // $(document).on("click", ".delete-btn", deleteReview);
+  // $(document).on("click", ".update-btn", updateReview);
 
-  const reviews;
-  
-  // looks for a query param in the url for shoe_id
-  let url = window.location.search;
-  let ShoeId;
-  if (url.indexOf("?shoe_id=") !== -1) {
-      ShoeId = url.split("=")[1];
-      getReviews(ShoeId);
-  }
-  else {
-      return;
-  }
+  const url = new URL(window.location.href);
+  const id = url.pathname.split("/")[2];
 
   // gets all reviews from the databse and updates page
-  function getReviews(shoe) {
-      ShoeId = shoe || "";
-      if (ShoeId) {
-        ShoeId = "/?shoe_id=" + ShoeId;
-      }
-      $.get("/api/reviews" + ShoeId, function(data) {
+  function getComments() {
+      $.get("/api/reviews/" + id, function(data) {
         console.log("Reviews", data);
-        reviews = data;
-        if (!reviews || !reviews.length) {
-          displayNone(shoe);
+        
+        if (!data || !data.length) {
+          displayNone();
         }
         else {
-          displayReviews();
+          displayReviews(data);
         }
       });
   }
 
-  // api call to delete reviews
-  function deleteReview(id) {
-      $.ajax({
-      method: "DELETE",
-      url: "/api/reviews/" + id
-      })
-      .then(function() {
-          getReviews(postCategorySelect.val());
-      });
-  }
 
   //  displays all constructed reviews HTML inside product page
-  function displayReviews() {
-      reviewsContainer.empty();
-      var reviewsToAdd = [];
-      for (var i = 0; i < reviews.length; i++) {
-      reviewsToAdd.push(createNewReview(reviews[i]));
-      }
-      reviewsContainer.append(reviewsToAdd);
-  }
+  function displayReviews(reviewsArray) {
+    for (elem of reviewsArray) {
+      
+      let newComment = $("<div>");
+      newComment.addClass("mt-4");
 
-  // posts new review to html
-  function createNewReview(review) {
-      var deleteBtn = $("<button>");
-      deleteBtn.text("DELETE");
-      deleteBtn.addClass("delete-btn btn-danger");
-      var updateBtn = $("<button>");
-      updateBtn.text("UPDATE");
-      updateBtn.addClass("update-btn btn-info");
-  }
+      let commentName = $("<h4>");
+      commentName.text(elem.reviewer_name);
 
-  // deletes selected review
-  function deleteReview() {
-      var currentReview = $(this)
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .data("review");
-      deletePost(currentReview.id);
-  }
+      let commentRating_Verified = $("<h3>");
+      commentRating_Verified.text(`Rating: ${elem.rating}/5 stars || Verified Owner: ${elem.verified_buyer}`);
 
-  // redirects user to the update page
-  function updateReview() {
-      var currentReview = $(this)
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .data("review");
-      window.location.href = "/update?review_id=" + currentReview.id;
+      let commentBody = $("<p>");
+      commentBody.text(elem.comment);
+
+      commentRating_Verified.append(commentBody);
+      commentName.append(commentRating_Verified);
+      newComment.append(commentName);
+      reviewsContainer.append(newComment);
+
+    }
   }
 
   // displays message if no reviews
-  function displayNone(id) {
+  function displayNone() {
       reviewsContainer.empty();
       var messageH2 = $("<h2>");
       messageH2.css({ "text-align": "center", "margin-top": "50px" });
@@ -99,4 +57,66 @@ $(document).ready(function() {
       reviewsContainer.append(messageH2);
   }
 
+  const commentInput = $("#comment-input");
+  const nameInput = $("#comment-name-input");
+  const verifiedInput = $("#verified-buyer");
+
+  $("#comment-form").on("submit", function(event) {
+    event.preventDefault();
+    
+    let checkState = verifiedInput.is(":checked") ? "true" : "false";
+    
+    let ratingInput = $("input[name=rating]:checked").map(function(_, el) {
+      return parseInt($(el).val());
+    });
+
+    let commentData = {
+      reviewer_name: nameInput.val(),
+      verified_buyer: checkState,
+      rating: ratingInput[0],
+      comment: commentInput.val(),
+      ShoeId: id
+    };
+    // console.log(commentData);
+    upsertComment(commentData)
+
+  });
+
+  function upsertComment(data) {
+    $.post("/api/reviews", data)
+    .then(getComments)
+  }
 })
+
+// // redirects user to the update page
+// function updateReview() {
+//     var currentReview = $(this)
+//       .parent()
+//       .parent()
+//       .parent()
+//       .parent()
+//       .data("review");
+//     window.location.href = "/update?review_id=" + currentReview.id;
+// }
+
+// // api call to delete reviews
+// function deleteReview(id) {
+//     $.ajax({
+//     method: "DELETE",
+//     url: "/api/reviews/" + id
+//     })
+//     .then(function() {
+//         getComments(postCategorySelect.val());
+//     });
+// }
+
+// // deletes selected review
+// function deleteReview() {
+//     var currentReview = $(this)
+//       .parent()
+//       .parent()
+//       .parent()
+//       .parent()
+//       .data("review");
+//     deletePost(currentReview.id);
+// }
