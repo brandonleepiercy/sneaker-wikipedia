@@ -1,19 +1,15 @@
-
 .logo {
     padding: 4rem;
     margin-top: -1.5rem;
 }
-
-.body {
-    background-image: url("/public/assets/background/back2.png");
+body {
+    background-image: url("../assets/background/back2.png");
     background-size: cover;
     font-family: 'FontAwesome','JetBrains Mono', monospace;
 }
-
 .form-control::-webkit-input-placeholder {
     color: black;
 }
-
 #search-input {
     width: 40%;
     background-color:#f0ff00;
@@ -24,36 +20,29 @@
     margin-top: -4rem;
     border-radius: 20px;
 }
-
-  
 .carousel-inner {
       background-color:#bc0e29;
   }
-
 .carousel-item {
       height:550px;
   }
-
 .carousel-item img {
       margin:0 auto;
       min-height: 500px;
       height:300px;
       object-fit: cover;
   }
-
 .mar-center {
     font-size: 18px;
     margin-top: 2.5rem;
     display: flex;
     justify-content: center;
   }
-
 .carousel-margin {
     margin-top: 1rem;
     max-height: 20rem;
     margin-bottom: 18rem;
 }
-
 .browse-by-style {
     text-align: center;
     letter-spacing: 5px;
@@ -61,7 +50,6 @@
     font-weight: 800;
     margin-bottom: 3rem;
 }
-
 .image {
     opacity: 1;
     width: 100%;
@@ -69,12 +57,10 @@
     transition: .5s ease;
     border-radius: 15px;
 }
-
 .image:hover {
     opacity: 0.5;
     cursor: pointer;
 }
-
 .shoe-style-btn {
     width: 60%;
     margin-top: 1rem;
@@ -85,8 +71,22 @@
     font-weight: 600;
     border-radius: 20px;
 }
-
 .bottom-browse-by-style-div {
     margin-top: 2rem;
     margin-bottom: 5rem;
+}
+/* logo media query */
+@media only screen and (max-width: 768px) {
+    .search-input {
+        width: 50%;
+    }
+    .carousel-inner {
+        width: 100%;
+    }
+    .carousel-item {
+        width: 100%;
+    }
+    .carousel-item img {
+        width: 100%;
+    }
 }
