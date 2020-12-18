@@ -11,14 +11,16 @@ $(document).ready(function() {
         };
     })
 
-    $(".shoe-style-btn").on("click", function() {
+    $(".shoe-cat-picker").on("click", function() {
         
         //Store the id of the category clicked by the user on the splash screen
         var category = $(this).attr("id");
         //Send the user to the search page and display all results in the category selected by the user
+        console.log(category);
         
         // set category in local storage
         localStorage.setItem("style", category);
+        window.location.href="/search";
         
     });
 })
