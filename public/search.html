@@ -25,7 +25,7 @@
   <!-- BEGIN SIDE BAR -->
   <div class="container">
     <div class="row">
-      <div class="col-xl-3">
+      <div class="col-xl-3" id="side-bar">
 
         <!-- SEARCH BAR -->
           <form class="form-inline my-2 my-xl-0">
@@ -635,18 +635,20 @@
 
             <!-- PRODUCT DISPLAY SECTION -->
             <div class="col-xl-9 col-sm-9">
+              <div class="row">
 
-              <div id="new-cards-div" class="row">
-                  <!-- <div class="col-sm-4">
-                  <div class="card shoe" style="width: 15rem;">
+                <!-- <div id="new-cards-div" class="col-sm-4">
+                  <div class="card shoe">
                     <img src="./assets/products/casual.png" class="card-img-top" alt="placeholder photo">
                     <div class="card-body">
                       <p class="card-text">Shoe name</p>
                     </div>
-                  </div>-->
+                  </div>
+                </div> -->
+
+      
               </div>
             </div>
-      </div>
      
 
     <!--EVENT LISTENERS FOR ICON CHANGES ON CLICKS-->
@@ -668,7 +670,7 @@
         if (sex.attr("aria-expanded") === 'true') {
           $("#gender-plus").attr("src", "./assets/icons/2931155 - add attach create maximize new plus.png");
         } else {
-          $("#gender-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png")
+          $("#gender-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png");
         }
       })
 
@@ -676,7 +678,7 @@
         if (size.attr("aria-expanded") === 'true') {
           $("#size-plus").attr("src", "./assets/icons/2931155 - add attach create maximize new plus.png");
         } else {
-          $("#size-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png")
+          $("#size-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png");
         }
       })
 
@@ -684,7 +686,7 @@
         if (style.attr("aria-expanded") === 'true') {
           $("#style-plus").attr("src", "./assets/icons/2931155 - add attach create maximize new plus.png");
         } else {
-          $("#style-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png")
+          $("#style-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png");
         }
       })
 
@@ -692,7 +694,7 @@
         if (color.attr("aria-expanded") === 'true') {
           $("#color-plus").attr("src", "./assets/icons/2931155 - add attach create maximize new plus.png");
         } else {
-          $("#color-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png")
+          $("#color-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png");
         }
       })
 
@@ -700,16 +702,15 @@
         if (date.attr("aria-expanded") === 'true') {
           $("#date-plus").attr("src", "./assets/icons/2931155 - add attach create maximize new plus.png");
         } else {
-          $("#date-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png")
+          $("#date-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png");
         }
       })
-
       
       brand.on("click", function(){
         if (brand.attr("aria-expanded") === 'true') {
           $("#brand-plus").attr("src", "./assets/icons/2931155 - add attach create maximize new plus.png");
         } else {
-          $("#brand-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png")
+          $("#brand-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png");
         }
       })
 
@@ -717,16 +718,15 @@
         if (maxPrice.attr("aria-expanded") === 'true') {
           $("#max-plus").attr("src", "./assets/icons/2931155 - add attach create maximize new plus.png");
         } else {
-          $("#max-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png")
+          $("#max-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png");
         }
       })
-
 
       collaborators.on("click", function(){
         if (collaborators.attr("aria-expanded") === 'true') {
           $("#collab-plus").attr("src", "./assets/icons/2931155 - add attach create maximize new plus.png");
         } else {
-          $("#collab-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png")
+          $("#collab-plus").attr("src", "./assets/icons/2931142 - delete minimize minus remove.png");
         }
       })
 
