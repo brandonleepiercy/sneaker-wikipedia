@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+    $("#logo").on("click", function (){
+        window.location.href="/";
+    })
     
     let searchedShoe = localStorage.getItem("searched-shoe");
     
