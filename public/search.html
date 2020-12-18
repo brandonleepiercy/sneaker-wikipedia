@@ -28,14 +28,18 @@
       <div class="col-xl-3" id="side-bar">
 
         <!-- SEARCH BAR -->
-          <form class="form-inline my-2 my-xl-0">
+          <!-- <form class="form-inline my-2 my-xl-0">
             <input class="form-control mr-xl-2" id="search-bar" type="search" placeholder="&#xf002;" aria-label="Search">
-          </form>
+          </form> -->
 
         <form action="" id="filter-form">
+          
+          <div class="form-inline my-2 my-xl-0">
+            <input class="form-control mr-xl-2" id="search-bar" type="search" placeholder="&#xf002;" aria-label="Search">
+          </div>
 
-           <!-- FILTER FOR SEX-->
-           <p class="filter" id="sex" data-toggle="collapse" data-target="#gender" aria-expanded="false" aria-controls="collapseExample">
+          <!-- FILTER FOR SEX-->
+          <p class="filter" id="sex" data-toggle="collapse" data-target="#gender" aria-expanded="false" aria-controls="collapseExample">
             GENDER
             <img src="./assets/icons/2931155 - add attach create maximize new plus.png" class="expand" id="gender-plus">
           </p>
@@ -635,18 +639,8 @@
 
             <!-- PRODUCT DISPLAY SECTION -->
             <div class="col-xl-9 col-sm-9">
-              <div class="row">
-
-                <!-- <div id="new-cards-div" class="col-sm-4">
-                  <div class="card shoe">
-                    <img src="./assets/products/casual.png" class="card-img-top" alt="placeholder photo">
-                    <div class="card-body">
-                      <p class="card-text">Shoe name</p>
-                    </div>
-                  </div>
-                </div> -->
-
-      
+              <div id="new-cards-div" class="row">
+                <!-- Search JS inserts product cards into this div -->
               </div>
             </div>
      

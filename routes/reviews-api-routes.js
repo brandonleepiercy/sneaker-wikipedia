@@ -22,7 +22,7 @@ module.exports = function(app) {
     console.log(req.body)
     db.Review.create(req.body).then(function(dbReview) {
       res.json(dbReview);
-      console.log(dbReview);
+      // console.log(dbReview);
       debugger;
 
     }).catch(function(err) {
