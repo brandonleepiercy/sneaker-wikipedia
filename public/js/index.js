@@ -20,6 +20,7 @@ $(document).ready(function() {
         
         // set category in local storage
         localStorage.setItem("style", category);
+        window.location.href="/search";
         
     });
 })
