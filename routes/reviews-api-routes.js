@@ -6,22 +6,30 @@ const shoesApiRoutes = require("./shoes-api-routes");
 // routes
 module.exports = function(app) {
   // Find all reviews and return them to the user with res.json
-  app.get("/api/reviews/:name", function(req, res) {
-    db.Shoes.findAll({
+  app.get("/api/reviews/:id", function(req, res) {
+    db.Shoe.findAll({
       where: {
-        name: req.params.name
+        id: req.params.id
       },
       include: [db.Review]
     }).then(function(dbReview) {
-      res.json(dbReview);
+      res.json(dbReview[0].Reviews);
     });
   });
 
   // posting a new review
   app.post("/api/reviews", function(req, res) {
+    console.log(req.body)
     db.Review.create(req.body).then(function(dbReview) {
       res.json(dbReview);
-    });
+      console.log(dbReview);
+      debugger;
+
+    }).catch(function(err) {
+      console.log(err)
+      res.status(500);
+      res.json({"err": err});
+    })
   });
 
   // deleting a review
