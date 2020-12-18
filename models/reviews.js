@@ -4,6 +4,9 @@ module.exports = function(sequelize, DataTypes) {
       verified_buyer: DataTypes.BOOLEAN,
       rating: DataTypes.INTEGER,
       comment: DataTypes.STRING
+    },
+    {
+      timestamps: false
     });
     Review.associate = function(models) {
       // review should belong to a shoe

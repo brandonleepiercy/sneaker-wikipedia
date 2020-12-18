@@ -11,7 +11,7 @@ $(document).ready(function() {
 
         $.ajax({
             method: "GET",
-            url: "/api/shoes/" + searchName
+            url: "/api/shoes/name/" + searchName
         }).then(function(res) {
             console.log(res);
             
@@ -109,7 +109,7 @@ $(document).ready(function() {
 
             $.ajax({
                 method: "GET",
-                url: "/api/shoes/" + searchName
+                url: "/api/shoes/name/" + searchName
             }).then(function(res) {
                 console.log(res);
                 

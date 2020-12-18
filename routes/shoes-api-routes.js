@@ -12,17 +12,17 @@ module.exports = function(app) {
       });
     });
 
-    // // finding one shoes with a specific name
-    // app.get("/api/shoes/:name", function(req, res) {
-    //     db.Shoe.findOne({
-    //         where: {
-    //             name: req.params.name
-    //         }
-    //     }).then(function(dbShoe) {
-    //         console.log(dbShoe);
-    //         res.json(dbShoe);
-    //     });
-    // });
+    // finding one shoes with a specific name
+    app.get("/api/shoes/name/:name", function(req, res) {
+        db.Shoe.findOne({
+            where: {
+                name: req.params.name
+            }
+        }).then(function(dbShoe) {
+            console.log(dbShoe);
+            res.json(dbShoe);
+        });
+    });
 
     // finding all shoes belonging to a specific category
     app.post("/api/shoes", function(req, res) {
