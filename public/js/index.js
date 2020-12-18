@@ -1,13 +1,26 @@
-$(function () {
-    $("#searchbar").on("submit", function () {
+$(document).ready(function() {
+    $(document).on("keypress", function (e) {
+        if(e.which == 13) {
         //Storing the search term from the search box
-        var searchTerm = $("#search").val().trim();
-        //Code to launch the search page
+            var searchTerm = $("#search-input").val().trim();
+            //Code to launch the search page
+            localStorage.setItem("searched-shoe", searchTerm)
+            if (searchTerm!=="") {
+                window.location.href="/search"
+            };
+        };
     })
 
-    $("#category-select").on("click", function () {
+    $(".shoe-cat-picker").on("click", function() {
+        
         //Store the id of the category clicked by the user on the splash screen
-        var category = $(this).id;
+        var category = $(this).attr("id");
         //Send the user to the search page and display all results in the category selected by the user
+        console.log(category);
+        
+        // set category in local storage
+        localStorage.setItem("style", category);
+        window.location.href="/search";
+        
     });
 })

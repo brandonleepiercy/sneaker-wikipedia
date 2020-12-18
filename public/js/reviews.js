@@ -9,6 +9,8 @@ $(document).ready(function() {
   const url = new URL(window.location.href);
   const id = url.pathname.split("/")[2];
 
+  getComments();
+
   // gets all reviews from the databse and updates page
   function getComments() {
       $.get("/api/reviews/" + id, function(data) {
@@ -34,11 +36,23 @@ $(document).ready(function() {
       let commentName = $("<h4>");
       commentName.text(elem.reviewer_name);
 
-      let commentRating_Verified = $("<h3>");
-      commentRating_Verified.text(`Rating: ${elem.rating}/5 stars || Verified Owner: ${elem.verified_buyer}`);
-
+      let commentRating_Verified = $("<h5>");
+      commentRating_Verified.text(`Rating: ${elem.rating}/5 || Verified Owner: ${elem.verified_buyer}`);
+      commentRating_Verified.css({
+        "margin-top": "8px",
+        "font-size": "13pt"
+      });
+      
       let commentBody = $("<p>");
       commentBody.text(elem.comment);
+      commentBody.css({
+        "border-style": "solid",
+        "border-width": "thin",
+        "border-color": "black",
+        "font-size": "large",
+        margin: "8px",
+        padding: "4px"
+      });
 
       commentRating_Verified.append(commentBody);
       commentName.append(commentRating_Verified);
@@ -63,6 +77,7 @@ $(document).ready(function() {
 
   $("#comment-form").on("submit", function(event) {
     event.preventDefault();
+    reviewsContainer.empty();
     
     let checkState = verifiedInput.is(":checked") ? "true" : "false";
     
