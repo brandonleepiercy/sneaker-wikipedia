@@ -1,20 +1,8 @@
 $(document).ready(function () { 
-    console.log("hello world!");
     var url = new URL(window.location.href);
-    console.log(url.pathname.split("/")[2]);
     var id = url.pathname.split("/")[2];
     console.log(id);
-    console.log(url);
-    // let url = window.location.search;
-    // let ShoeId;
-    // if (url.indexOf("?id=") !== -1) {
-    //     ShoeId = url.split("=")[1];
-    //     getReviews(ShoeId);
-    //     console.log(ShoeId);
-    // }
-    // else {
-    //     return;
-    // }
+
     //If there isn't a shoeID stored, instruct the user to go back and pick another shoe.
     if (!id) {
         console.log("No shoe selected. Go back to browse.");
