@@ -3,6 +3,10 @@ $(document).ready(function () {
     var id = url.pathname.split("/")[2];
     console.log(id);
 
+    $("#logo").on("click", function() {
+        window.location.href="/";
+    });
+
     //If there isn't a shoeID stored, instruct the user to go back and pick another shoe.
     if (!id) {
         console.log("No shoe selected. Go back to browse.");
