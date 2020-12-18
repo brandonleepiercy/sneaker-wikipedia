@@ -20,7 +20,6 @@ body {
 #search-bar {
     margin-left: 10px;
     margin-bottom: 10px;
-    letter-spacing: 5px;
 }
 
 .filter {
@@ -71,9 +70,8 @@ span {
 }
 
 .submit {
-    width: 80%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding: 0 40px;  
+    margin: 1rem 1rem;
     background-color: #F0FF00;
     border: 3px solid #020202;
     letter-spacing: 5px;
@@ -93,6 +91,8 @@ span {
 
 
 
+
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1199px) {
@@ -100,6 +100,10 @@ span {
     #side-bar {
         width: 25%;
     } 
+
+    #search-bar {
+        width: initial;
+    }
     
     .card {
         margin-left: 25px;
@@ -115,10 +119,10 @@ span {
     #side-bar {
         width: 25%;
     } 
-    
+  
     #search-bar {
-        width: 80%
-    }
+        width: 100%
+    } 
 
     .card {
         margin-left: 15px;
@@ -135,9 +139,9 @@ span {
         font-size: 12px;
     }
 
-    .submit {
+    /* .submit {
         width: 90%;
-    }
+    } */
 
     .card {
         margin-left: 15px;
