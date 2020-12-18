@@ -4,8 +4,8 @@
     margin-top: -1.5rem;
 }
 
-body {
-    background-image: url("../assets/background/back2.png");
+.body {
+    background-image: url("/public/assets/background/back2.png");
     background-size: cover;
     font-family: 'FontAwesome','JetBrains Mono', monospace;
 }
@@ -90,19 +90,3 @@ body {
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
-
-
-
-/* @media only screen and (max-width: 1280px) {
-    .carousel-margin {
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-}
-
-@media only screen and (max-width: 1024) {
-    .carousel-margin {
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-} */
