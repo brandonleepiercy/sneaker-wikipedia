@@ -23,25 +23,25 @@ Searching for a specific shoe, and reading about the information related to the 
 
 ## Credits
 
-Morgan :
+Morgan Wong:
   * Github: ma-wong
-  * email: morganw118@gmail.com
+  * eEmail: morganw118@gmail.com
   
 Yessica Perez:
   * Github: yessSamuels
-  * email: yessicaperez@me.com
+  * Email: yessicaperez@me.com
 
 Jessica Crump: 
   * Github: jesscru
-  * email: jessicacrump7@gmail.com
+  * Email: jessicacrump7@gmail.com
   
 Shanni Suissa: 
   * Github: ShanniSnax
-  * email: shannicsuissa@gmail.com
+  * Email: shannicsuissa@gmail.com
   
 Brandon Piercy: 
   * Github: brandonleepiercy
-  * email: b.piercy567@gmail.com
+  * Email: b.piercy567@gmail.com
 
 ## License
 
