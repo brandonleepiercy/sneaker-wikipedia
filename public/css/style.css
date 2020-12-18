@@ -4,8 +4,8 @@
     margin-top: -1.5rem;
 }
 
-.body {
-    background-image: url("/public/assets/background/back2.png");
+body {
+    background-image: url("../assets/background/back2.png");
     background-size: cover;
     font-family: 'FontAwesome','JetBrains Mono', monospace;
 }
@@ -90,3 +90,28 @@
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
+
+/* logo media query */
+
+@media only screen and (max-width: 768px) {
+  
+    .search-input {
+        width: 50%;
+        
+    }
+    .carousel-inner {
+        width: 100%;
+        
+    }
+    .carousel-item {
+        width: 100%;
+        
+    }
+    .carousel-item img {
+        width: 100%;
+        
+    }
+}
+
+
+
