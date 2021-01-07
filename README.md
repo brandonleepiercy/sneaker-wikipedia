@@ -21,11 +21,13 @@ Type "npm i" into CMD to install the neccesary packages for this repository.
 
 Searching for a specific shoe, and reading about the information related to the sneaker. Future releases intend to provide information so that the user can convert sizes to the other gender's size, so that the user may purchase shoes intended for the opposite gender, if sizes in their gender are sold out or otherwise unavailable. Future releases also intend to provide links to active listings/ places where these shoes can be purchased, given that they are typically not listed on manufacturer sites.
 
+Deployed at: https://infinite-castle-57105.herokuapp.com/
+
 ## Credits
 
 Morgan Wong:
   * Github: ma-wong
-  * eEmail: morganw118@gmail.com
+  * Email: morganw118@gmail.com
   
 Yessica Perez:
   * Github: yessSamuels
